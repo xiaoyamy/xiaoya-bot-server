@@ -20,7 +20,6 @@ def webhook():
         reply = f"小雅收到你的訊息囉：{text}"
         requests.post(f"{BOT_URL}/sendMessage", json={"chat_id": chat_id, "text": reply})
     return "OK"
-
-if __name__ == '__main__':
     
-app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
